@@ -10,7 +10,7 @@ async function getInvasions() {
 }
 
 app.use(cors());
-app.get('/', () => {
+app.get('/', (req,res) => {
     res.status(200).json({alive: true, message: "I'm Alive."})
 });
 
