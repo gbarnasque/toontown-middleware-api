@@ -3,7 +3,7 @@ const axios = require('axios');
 const app = express();
 const cors = require('cors');
 
-const PORT = process.env.port || 3000;
+const PORT = process.env.PORT || 3000;
 
 async function getInvasions() {
     return axios.get('https://www.toontownrewritten.com/api/invasions');
@@ -25,5 +25,5 @@ app.get('/invasions', async (req,res) => {
 });
 
 app.listen(PORT, () => {
-    console.log('Server RUNNING');
+    console.log(`Server RUNNING at PORT ${PORT}`);
 });
